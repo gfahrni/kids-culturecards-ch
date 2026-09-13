@@ -45,11 +45,6 @@ Croix blanche sur fond rouge, l'un des deux seuls drapeaux nationaux carrés.
 
 La section `# Image` est volontairement laissée vide pour le moment : les visuels seront ajoutés plus tard.
 
-## Slots non définis
-
-Chaque sous-thème contient un fichier placeholder `_undefined.md` portant le numéro du prochain emplacement libre.
-Il sert de modèle pour ajouter de futures cartes (par exemple `1-1-028_undefined.md`).
-
 ## Contenu
 
 - Drapeaux et chefs-lieux : les **26 cantons suisses** sont complets.

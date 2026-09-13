@@ -1,0 +1,185 @@
+{
+ "7-2-009": {
+  "titre": "Morse (animal)",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/7_Walross_1999.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q40994"
+ },
+ "7-3-059": {
+  "titre": "Hippocampe (poisson)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Hippocampus_barbouri_01.JPG/1280px-Hippocampus_barbouri_01.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q74363"
+ },
+ "2-2-004": {
+  "titre": "Vienne (Autriche)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Salzburg%2C_Vienna%2C_Vorarlberg.svg/1280px-Flag_of_Salzburg%2C_Vienna%2C_Vorarlberg.svg.png?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q1741"
+ },
+ "2-1-004": {
+  "titre": "Sion (Valais)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Sion_depuis_Nax_-_2022.jpg/1280px-Sion_depuis_Nax_-_2022.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q68136"
+ },
+ "2-1-005": {
+  "titre": "Fribourg (ville suisse)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fribourg_022.JPG/1280px-Fribourg_022.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q36378"
+ },
+ "2-1-013": {
+  "titre": "Altdorf (Uri)",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Altdorf_night.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q68150"
+ },
+ "4-3-005": {
+  "titre": "Amazone (fleuve)",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Mouths_of_amazon_geocover_1990.png?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q3783"
+ },
+ "4-3-006": {
+  "titre": "Mississippi (fleuve)",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Miss_R_dam_27.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q1497"
+ },
+ "4-3-033": {
+  "titre": "Congo (fleuve)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Aerial_view_of_the_Congo_River_near_Kisangani.jpg/1280px-Aerial_view_of_the_Congo_River_near_Kisangani.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q3503"
+ },
+ "4-2-009": {
+  "titre": "Arctique",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Arctic_circle.svg/1280px-Arctic_circle.svg.png?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q25322"
+ },
+ "6-3-004": {
+  "titre": "Mercure (planète)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Mercury_in_color_-_Prockter07_centered.jpg/1280px-Mercury_in_color_-_Prockter07_centered.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q308"
+ },
+ "6-3-005": {
+  "titre": "Vénus (planète)",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/PIA23791-Venus-RealAndEnhancedContrastViews-20200608_%28cropped%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q313"
+ },
+ "6-3-006": {
+  "titre": "Mars (planète)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Mars_Valles_Marineris_EDIT.jpg/1280px-Mars_Valles_Marineris_EDIT.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q111"
+ },
+ "6-3-007": {
+  "titre": "Jupiter (planète)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Hubble%E2%80%99s_observation_of_Jupiter_in_2021_%2851688147562%29.jpg/1280px-Hubble%E2%80%99s_observation_of_Jupiter_in_2021_%2851688147562%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q319"
+ },
+ "6-3-008": {
+  "titre": "Saturne (planète)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/1280px-Saturn_during_Equinox.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q193"
+ },
+ "6-3-009": {
+  "titre": "Uranus (planète)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/1280px-Uranus2.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q324"
+ },
+ "6-3-010": {
+  "titre": "Neptune (planète)",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Neptune_Voyager2_color_calibrated.png?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q332"
+ },
+ "6-3-011": {
+  "titre": "Pluton (planète naine)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Pluto_in_True_Color_-_High-Res.jpg/1280px-Pluto_in_True_Color_-_High-Res.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q339"
+ },
+ "6-3-013": {
+  "titre": "Titan (lune)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/PIA21923-Titan-SaturnMoon-InfraredViews-20180718.jpg/1280px-PIA21923-Titan-SaturnMoon-InfraredViews-20180718.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q2565"
+ },
+ "6-3-015": {
+  "titre": "Io (lune)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Io_highest_resolution_true_color.jpg/1280px-Io_highest_resolution_true_color.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q3123"
+ },
+ "6-3-022": {
+  "titre": "Galaxie d'Andromède",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/M31_Galaxie_d_Andromede_Hamois_25_10_2024_Luc_Viatour_annotated.jpg/1280px-M31_Galaxie_d_Andromede_Hamois_25_10_2024_Luc_Viatour_annotated.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q2469"
+ },
+ "6-3-033": {
+  "titre": "Orion (constellation)",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Orion_constellation_map-fr.png?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q8860"
+ },
+ "6-3-038": {
+  "titre": "Univers",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Observable_Universe_French_Annotations_for_wiki.png/1280px-Observable_Universe_French_Annotations_for_wiki.png?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q1"
+ },
+ "6-3-044": {
+  "titre": "James Webb (télescope spatial)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/James_Webb_Space_Telescope.jpg/1280px-James_Webb_Space_Telescope.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q186447"
+ },
+ "6-3-056": {
+  "titre": "Hubble (télescope spatial)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/HST-SM4.jpeg/1280px-HST-SM4.jpeg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q2513"
+ },
+ "3-1-012": {
+  "titre": "Pilate (montagne)",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Picswiss_LU-03-09.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q15265"
+ },
+ "3-1-038": null,
+ "5-2-013": {
+  "titre": "Cathédrale Notre-Dame de Paris",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Notre-Dame_de_Paris_2013-07-24.jpg/1280px-Notre-Dame_de_Paris_2013-07-24.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q2981"
+ },
+ "5-2-016": {
+  "titre": "Alhambra (Grenade)",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg/1280px-Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q47476"
+ },
+ "5-3-009": {
+  "titre": "Cathédrale Saint-Basile-le-Bienheureux de Moscou",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Moscow_05-2012_StBasilCathedral.jpg/1280px-Moscow_05-2012_StBasilCathedral.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q129846"
+ },
+ "5-3-020": null,
+ "6-1-003": {
+  "titre": "Lauterbrunnen",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lauterbrunnen3.JPG/1280px-Lauterbrunnen3.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q64011"
+ },
+ "6-1-011": {
+  "titre": "Sarine",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Sarine-fribourg.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q14333"
+ },
+ "6-1-012": {
+  "titre": "Saut du Doubs",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/Saut_du_Doubs_01.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q2227821"
+ },
+ "6-1-025": null,
+ "6-1-028": {
+  "titre": "Vallorbe",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Vallorbe_%28VD%29_2.jpg/1280px-Vallorbe_%28VD%29_2.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q68587"
+ },
+ "5-2-017": {
+  "titre": "Escurial",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Vista_aerea_del_Monasterio_de_El_Escorial.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "qid": "Q28471"
+ },
+ "5-1-005": {
+  "titre": "Kapellbrücke",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Kapellbr%C3%BCcke_Dawn.jpg/1280px-Kapellbr%C3%BCcke_Dawn.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q25225"
+ },
+ "5-3-005": {
+  "titre": "Moaï",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Ahu_Tongariki.jpg/1280px-Ahu_Tongariki.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "qid": "Q20350"
+ }
+}
