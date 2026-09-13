@@ -3,7 +3,7 @@
 Base de données de contenu pour un système de **cartes à collectionner** destinées aux enfants en Suisse.
 Chaque carte présente un sujet de culture générale : une image, un titre et une courte description de deux lignes.
 
-La base compte actuellement **832 cartes**, réparties en **7 thèmes** (plus de 100 cartes par thème).
+La base compte **999 cartes**, réparties en **7 thèmes**.
 
 ## Structure
 
@@ -14,8 +14,8 @@ La base compte actuellement **832 cartes**, réparties en **7 thèmes** (plus de
 | 3 | `montagnes` | `suisse`, `europe`, `monde` | 106 |
 | 4 | `lacs-mers-oceans-rivieres` | `lacs`, `mers-et-oceans`, `fleuves-et-rivieres` | 142 |
 | 5 | `monuments` | `suisse`, `europe`, `monde` | 116 |
-| 6 | `merveilles-naturelles` | `suisse`, `monde` | 100 |
-| 7 | `espace` | `systeme-solaire`, `au-dela`, `exploration` | 126 |
+| 6 | `merveilles-et-espace` | `suisse`, `monde`, `espace` | 160 |
+| 7 | `animaux` | `mammiferes`, `oiseaux`, `poissons`, `reptiles-et-amphibiens`, `insectes-et-araignees`, `races-suisses` | 233 |
 
 Un fichier Markdown correspond à une carte :
 `<theme>/<sous-theme>/<theme-sous-theme-numero>_<nom>.md`
@@ -25,7 +25,7 @@ Un fichier Markdown correspond à une carte :
 L'identifiant d'une carte est de la forme `theme-sous-theme-numero` :
 
 - `1-1-001` → thème 1 (`drapeaux`), sous-thème 1 (`suisse`), première carte.
-- `3-2-004` → thème 3 (`montagnes`), sous-thème 2 (`europe`), quatrième carte.
+- `7-2-004` → thème 7 (`animaux`), sous-thème 2 (`oiseaux`), quatrième carte.
 
 La numérotation est séquentielle et redémarre à `001` dans chaque sous-thème.
 
@@ -53,9 +53,9 @@ Il sert de modèle pour ajouter de futures cartes (par exemple `1-1-028_undefine
 ## Contenu
 
 - Drapeaux et chefs-lieux : les **26 cantons suisses** sont complets.
+- Le thème 6 fusionne les **merveilles naturelles** et l'**espace**.
+- Le thème 7 regroupe les **animaux suisses** : mammifères, oiseaux, poissons, reptiles, amphibiens, insectes, araignées et races d'élevage.
 - Les principaux pays d'Europe et du monde sont traités du point de vue suisse.
-- Les thèmes montagnes, monuments et merveilles naturelles privilégient la Suisse, puis l'Europe et le monde.
-- Le thème espace mêle les incontournables et des découvertes plus étonnantes.
 
 ## Conventions
 
