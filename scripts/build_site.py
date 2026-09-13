@@ -119,13 +119,13 @@ dialog#lb[open]{animation:lbpop .18s ease}
 @keyframes lbpop{from{opacity:0;transform:scale(.96)}}
 .lbBox{position:relative;width:100%;display:flex;flex-direction:column;color:var(--fg);background:var(--card);
 border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.45);max-height:94vh}
-.lbImgWrap{position:relative;background:var(--frame);display:flex;align-items:center;justify-content:center;padding:14px;min-height:0}
-.lbId{position:absolute;right:14px;bottom:14px;max-width:80%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-font-size:11px;color:#fff;background:rgba(0,0,0,.5);border-radius:999px;padding:3px 9px}
+.lbImgWrap{background:var(--frame);display:flex;align-items:center;justify-content:center;padding:14px;min-height:0}
+.lbId{flex:0 0 auto;align-self:flex-end;white-space:nowrap;font-size:11px;color:var(--muted);
+background:var(--frame);border:1px solid var(--line);border-radius:999px;padding:2px 8px}
 .lbImgWrap img{max-width:100%;max-height:70vh;width:auto;height:auto;object-fit:contain;display:block;border-radius:8px}
-.lbCap{padding:12px 16px 16px}
-.lbCap h3{margin:0 0 4px;font-size:17px}
-.lbCap p{margin:0;color:var(--muted);font-size:14px}
+.lbCap{padding:12px 16px 16px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px}
+.lbCap h3{flex:1 1 100%;margin:0 0 4px;font-size:17px}
+.lbCap p{flex:1 1 auto;margin:0;color:var(--muted);font-size:14px}
 .lbCount{position:absolute;top:11px;left:14px;z-index:2;font-size:12px;color:#fff;background:rgba(0,0,0,.5);border-radius:999px;padding:3px 9px}
 .lbClose{position:absolute;top:9px;right:10px;z-index:2;border:0;cursor:pointer;background:rgba(0,0,0,.5);color:#fff;
 width:32px;height:32px;border-radius:999px;font-size:20px;line-height:1}
@@ -155,8 +155,8 @@ html.lb-on{overflow:hidden}
     <button class="lbClose" id="lbClose" aria-label="Fermer">&times;</button>
     <button class="lbNav lbPrev" id="lbPrev" aria-label="Carte precedente">&#8249;</button>
     <button class="lbNav lbNext" id="lbNext" aria-label="Carte suivante">&#8250;</button>
-    <div class="lbImgWrap"><img id="lbImg" alt=""><span class="lbId" id="lbId"></span></div>
-    <div class="lbCap"><h3 id="lbTitle"></h3><p id="lbDesc"></p></div>
+    <div class="lbImgWrap"><img id="lbImg" alt=""></div>
+    <div class="lbCap"><h3 id="lbTitle"></h3><p id="lbDesc"></p><span class="lbId" id="lbId"></span></div>
   </div>
 </dialog>
 <script>
