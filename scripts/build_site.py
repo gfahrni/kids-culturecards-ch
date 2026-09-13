@@ -118,7 +118,7 @@ dialog#lb{border:0;padding:0;background:transparent;width:min(1100px,92vw);max-w
 dialog#lb::backdrop{background:rgba(0,0,0,.62);backdrop-filter:blur(4px)}
 dialog#lb[open]{animation:lbpop .18s ease}
 @keyframes lbpop{from{opacity:0;transform:scale(.96)}}
-.lbBox{position:relative;width:100%;display:flex;flex-direction:column;background:var(--card);
+.lbBox{position:relative;width:100%;display:flex;flex-direction:column;color:var(--fg);background:var(--card);
 border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.45);max-height:94vh}
 .lbImgWrap{background:var(--frame);display:flex;align-items:center;justify-content:center;padding:14px;min-height:0}
 .lbImgWrap img{max-width:100%;max-height:70vh;width:auto;height:auto;object-fit:contain;display:block;border-radius:8px}
