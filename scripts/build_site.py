@@ -114,6 +114,26 @@ contain-intrinsic-size:280px}
 .card h3{margin:11px 13px 4px;font-size:15px;line-height:1.3}
 .card p{margin:0 13px 13px;color:var(--muted);font-size:13px}
 .empty{color:var(--muted);text-align:center;padding:60px 0}
+dialog#lb{border:0;padding:0;background:transparent;width:min(1100px,92vw);max-width:100vw;max-height:100vh}
+dialog#lb::backdrop{background:rgba(0,0,0,.62);backdrop-filter:blur(4px)}
+dialog#lb[open]{animation:lbpop .18s ease}
+@keyframes lbpop{from{opacity:0;transform:scale(.96)}}
+.lbBox{position:relative;width:100%;display:flex;flex-direction:column;background:var(--card);
+border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.45);max-height:94vh}
+.lbImgWrap{background:var(--frame);display:flex;align-items:center;justify-content:center;padding:14px;min-height:0}
+.lbImgWrap img{max-width:100%;max-height:70vh;width:auto;height:auto;object-fit:contain;display:block;border-radius:8px}
+.lbCap{padding:12px 16px 16px}
+.lbCap h3{margin:0 0 4px;font-size:17px}
+.lbCap p{margin:0;color:var(--muted);font-size:14px}
+.lbCount{position:absolute;top:11px;left:14px;z-index:2;font-size:12px;color:#fff;background:rgba(0,0,0,.5);border-radius:999px;padding:3px 9px}
+.lbClose{position:absolute;top:9px;right:10px;z-index:2;border:0;cursor:pointer;background:rgba(0,0,0,.5);color:#fff;
+width:32px;height:32px;border-radius:999px;font-size:20px;line-height:1}
+.lbNav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;border:0;cursor:pointer;background:rgba(0,0,0,.45);
+color:#fff;width:42px;height:42px;border-radius:999px;font-size:24px;line-height:1}
+.lbPrev{left:8px}.lbNext{right:8px}
+.lbClose:hover,.lbNav:hover{background:rgba(0,0,0,.72)}
+html.lb-on{overflow:hidden}
+@media (prefers-reduced-motion:reduce){dialog#lb[open]{animation:none}}
 </style>
 </head>
 <body>
@@ -128,6 +148,16 @@ contain-intrinsic-size:280px}
   <div class="subtabs" id="subtabs"></div>
 </header>
 <main><div class="grid" id="grid"></div><div class="empty" id="empty" hidden>Aucun resultat.</div></main>
+<dialog id="lb" aria-label="Carte agrandie">
+  <div class="lbBox">
+    <span class="lbCount" id="lbCount"></span>
+    <button class="lbClose" id="lbClose" aria-label="Fermer">&times;</button>
+    <button class="lbNav lbPrev" id="lbPrev" aria-label="Carte precedente">&#8249;</button>
+    <button class="lbNav lbNext" id="lbNext" aria-label="Carte suivante">&#8250;</button>
+    <div class="lbImgWrap"><img id="lbImg" alt=""></div>
+    <div class="lbCap"><h3 id="lbTitle"></h3><p id="lbDesc"></p></div>
+  </div>
+</dialog>
 <script>
 const DATA = /*__DATA__*/;
 const THEMES = /*__THEMES__*/;
@@ -153,21 +183,60 @@ function subTabs(){
   el.innerHTML = items.map(s =>
     `<button class="sub${s.key===sub?" active":""}" data-s="${s.key}">${s.label}</button>`).join("");
 }
+let visible = [], idx = 0;
 function render(){
   const nq = norm(q);
   const list = DATA.filter(c =>
     (theme==="all" || c.t===theme) &&
     (theme==="all" || sub==="all" || c.s===sub) &&
     (!nq || norm(c.title).includes(nq)));
+  visible = list;
+  if(lb.open) lb.close();
   $("count").textContent = list.length + (list.length>1?" cartes":" carte");
-  $("grid").innerHTML = list.map(c => {
+  $("grid").innerHTML = list.map((c,i) => {
     const t = c.title.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
     const d = c.desc.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-    return `<article class="card"><div class="frame"><img loading="lazy" decoding="async" `
+    return `<article class="card" data-i="${i}"><div class="frame"><img loading="lazy" decoding="async" `
       + `src="${IMG}${c.id}.webp" alt="${t}"></div><h3>${t}</h3><p>${d}</p></article>`;
   }).join("");
   $("empty").hidden = list.length>0;
 }
+
+const lb=$("lb"), lbImg=$("lbImg"), lbTitle=$("lbTitle"), lbDesc=$("lbDesc"), lbCount=$("lbCount");
+function preload(){
+  [1,-1].forEach(d => { const c = visible[(idx+d+visible.length)%visible.length];
+    if(c) new Image().src = IMG+c.id+".webp"; });
+}
+function openLb(i){
+  if(!visible.length) return;
+  idx = (i + visible.length) % visible.length;
+  const c = visible[idx];
+  lbImg.src = IMG+c.id+".webp"; lbImg.alt = c.title;
+  lbTitle.textContent = c.title; lbDesc.textContent = c.desc;
+  lbCount.textContent = (idx+1)+" / "+visible.length;
+  if(!lb.open) lb.showModal();
+  document.documentElement.classList.add("lb-on");
+  preload();
+}
+$("grid").addEventListener("click", e => {
+  const card = e.target.closest(".card"); if(!card) return;
+  openLb(+card.dataset.i);
+});
+lb.addEventListener("click", e => { if(e.target===lb) lb.close(); });
+lb.addEventListener("close", () => document.documentElement.classList.remove("lb-on"));
+lb.addEventListener("keydown", e => {
+  if(e.key==="ArrowLeft"){ e.preventDefault(); openLb(idx-1); }
+  else if(e.key==="ArrowRight"){ e.preventDefault(); openLb(idx+1); }
+});
+$("lbPrev").onclick = () => openLb(idx-1);
+$("lbNext").onclick = () => openLb(idx+1);
+$("lbClose").onclick = () => lb.close();
+let sx=null;
+lb.addEventListener("pointerdown", e => { sx=e.clientX; });
+lb.addEventListener("pointerup", e => {
+  if(sx==null) return; const dx=e.clientX-sx; sx=null;
+  if(Math.abs(dx)>40) openLb(idx + (dx<0?1:-1));
+});
 function setTheme(next){
   document.documentElement.dataset.theme = next;
   $("toggle").textContent = next==="dark" ? "Clair" : "Sombre";

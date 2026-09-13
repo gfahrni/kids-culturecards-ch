@@ -2,10 +2,10 @@
  "1-2-001": {
   "titre": "France",
   "qid": "Q142",
-  "file": "Flag of France (XII-XIII).svg",
-  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_France_%28XII-XIII%29.svg/1280px-Flag_of_France_%28XII-XIII%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "file": "Flag of France.svg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1280px-Flag_of_France.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "licence": "Public domain",
-  "auteur": "<a href=\"//commons.wikimedia.org/wiki/User:F_l_a_n_k_e_r\" title=\"User:F l a n k e r\">F l a n k e r</a>"
+  "auteur": "<div style=\"display:inline-block;padding:0 3px;background-color:#CCF\">Original:</div> <div style=\"display:inline-block;padding:3px 0;\">Unknown</div> <div style=\"display:inline-block;padding:0 3px;background-color:#CCF\">Vector: </div> <div style=\"display:inline-block;\"><a href=\"//commons.wikimedia.org/wiki/User:SKopp\" title=\"User:SKopp\">SKopp</a></div>"
  },
  "1-2-002": {
   "titre": "Allemagne",
@@ -82,10 +82,10 @@
  "1-2-011": {
   "titre": "Grèce",
   "qid": "Q41",
-  "file": "Greek Independence 1821.svg",
-  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Greek_Independence_1821.svg/1280px-Greek_Independence_1821.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "file": "Flag of Greece.svg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/1280px-Flag_of_Greece.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "licence": "Public domain",
-  "auteur": "<a href=\"https://en.wikipedia.org/wiki/User:Dragases\" class=\"extiw\" title=\"en:User:Dragases\">Dragases</a>"
+  "auteur": "Unknown author<span style=\"display: none;\">Unknown author</span>"
  },
  "1-2-012": {
   "titre": "Irlande",
@@ -362,10 +362,10 @@
  "1-3-002": {
   "titre": "États-Unis",
   "qid": "Q30",
-  "file": "Flag of the United States (1959–1960).svg",
-  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_the_United_States_%281959%E2%80%931960%29.svg/1280px-Flag_of_the_United_States_%281959%E2%80%931960%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "file": "Flag of the United States.svg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "licence": "Public domain",
-  "auteur": "Flag design by the U.S. Government; SVG by Gunter Küchler / <a href=\"//commons.wikimedia.org/wiki/Berlin\" title=\"Berlin\">Berlin</a>"
+  "auteur": "Uploaded by <a href=\"//commons.wikimedia.org/wiki/User:Dbenbenn\" title=\"User:Dbenbenn\">Dbenbenn</a>; edited by users such as <a href=\"//commons.wikimedia.org/wiki/User:Zscout370\" title=\"User:Zscout370\">Zscout370</a>, <a href=\"//commons.wikimedia.org/wiki/User:Jacobolus\" title=\"User:Jacobolus\">Jacobolus</a>, <a href=\"//commons.wikimedia.org/wiki/User:Indolences\" title=\"User:Indolences\">Indolences</a>, and <a href=\"//commons.wikimedia.org/wiki/User:Technion\" title=\"User:Technion\">Technion</a>."
  },
  "1-3-003": {
   "titre": "Canada",
