@@ -4,14 +4,13 @@
 Donnees inline (pas de fetch), images referencees dans ../images/cartes-500/.
 """
 
-import html
+import argparse
 import json
 import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "cartes-500")
-DEST = os.path.join(ROOT, "site", "index.html")
 ID_RE = re.compile(r"^(\d+-\d+-\d+)_")
 
 THEMES = [
@@ -161,7 +160,7 @@ html.lb-on{overflow:hidden}
 <script>
 const DATA = /*__DATA__*/;
 const THEMES = /*__THEMES__*/;
-const IMG = "../images/cartes-500/";
+const IMG = /*__IMG__*/;
 const ALL = {key:"all",label:"Tout"};
 
 const norm = s => (s||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase();
@@ -268,14 +267,23 @@ themeTabs(); subTabs(); render();
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Genere le site a partir de cartes-500/.")
+    parser.add_argument("--out", default="site/index.html",
+                        help="fichier HTML de sortie (relatif a la racine)")
+    parser.add_argument("--img", default="../images/cartes-500/",
+                        help="base du chemin des images vue depuis le HTML")
+    args = parser.parse_args()
+
     cards, themes = collect()
-    os.makedirs(os.path.dirname(DEST), exist_ok=True)
+    dest = os.path.join(ROOT, args.out)
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
     out = (TEMPLATE
            .replace("/*__DATA__*/", json.dumps(cards, ensure_ascii=False, separators=(",", ":")))
-           .replace("/*__THEMES__*/", json.dumps(themes, ensure_ascii=False, separators=(",", ":"))))
-    with open(DEST, "w", encoding="utf-8") as fh:
+           .replace("/*__THEMES__*/", json.dumps(themes, ensure_ascii=False, separators=(",", ":")))
+           .replace("/*__IMG__*/", json.dumps(args.img)))
+    with open(dest, "w", encoding="utf-8") as fh:
         fh.write(out)
-    print(f"{len(cards)} cartes -> {os.path.relpath(DEST, ROOT)} ({len(out)//1024} Ko)")
+    print(f"{len(cards)} cartes -> {os.path.relpath(dest, ROOT)} ({len(out)//1024} Ko)")
 
 
 if __name__ == "__main__":

@@ -1,35 +1,40 @@
-# Culture générale — base de données de cartes à collectionner
+# Culture générale — cartes à collectionner
 
-Base de données de contenu pour un système de **cartes à collectionner** destinées aux enfants en Suisse.
-Chaque carte présente un sujet de culture générale : une image, un titre et une courte description de deux lignes.
+Base de **500 cartes** de culture générale destinées aux enfants en Suisse.
+Chaque carte associe une **image**, un **titre** et une **courte description**.
 
-La base compte **999 cartes**, réparties en **7 thèmes**.
+Un site statique permet de parcourir la collection : onglets par thème,
+sous-onglets par sous-thème, recherche instantanée et vue agrandie navigable.
 
-## Structure
+## Thèmes
 
 | N° | Thème | Sous-thèmes | Cartes |
 |----|-------|-------------|-------:|
 | 1 | `drapeaux` | `suisse`, `europe`, `monde` | 121 |
-| 2 | `capitales-chefs-lieux` | `suisse`, `europe`, `monde` | 121 |
-| 3 | `montagnes` | `suisse`, `europe`, `monde` | 106 |
-| 4 | `lacs-mers-oceans-rivieres` | `lacs`, `mers-et-oceans`, `fleuves-et-rivieres` | 142 |
-| 5 | `monuments` | `suisse`, `europe`, `monde` | 116 |
-| 6 | `merveilles-et-espace` | `suisse`, `monde`, `espace` | 160 |
-| 7 | `animaux` | `suisse`, `europe`, `monde` | 233 |
+| 2 | `capitales-chefs-lieux` | `suisse`, `europe`, `monde` | 55 |
+| 3 | `montagnes` | `suisse`, `europe`, `monde` | 35 |
+| 4 | `lacs-mers-oceans-rivieres` | `lacs`, `mers-et-oceans`, `fleuves-et-rivieres` | 55 |
+| 5 | `monuments` | `suisse`, `europe`, `monde` | 54 |
+| 6 | `merveilles-et-espace` | `suisse`, `monde`, `espace` | 75 |
+| 7 | `animaux` | `suisse`, `europe`, `monde` | 105 |
+| | | **Total** | **500** |
 
-Un fichier Markdown correspond à une carte :
-`<theme>/<sous-theme>/<theme-sous-theme-numero>_<nom>.md`
+## Arborescence
 
-## Identifiant unique
-
-L'identifiant d'une carte est de la forme `theme-sous-theme-numero` :
-
-- `1-1-001` → thème 1 (`drapeaux`), sous-thème 1 (`suisse`), première carte.
-- `7-2-004` → thème 7 (`animaux`), sous-thème 2 (`oiseaux`), quatrième carte.
-
-La numérotation est séquentielle et redémarre à `001` dans chaque sous-thème.
+```
+cartes-500/        un fichier Markdown par carte (source)
+images/
+  cartes-500/      une image WebP par carte (nom = identifiant de carte)
+  _flags.json      source et licence des drapeaux
+  _resolution.json source et licence des autres images
+site/index.html    site généré (versionné pour aperçu local)
+scripts/           outils Python (stdlib + Pillow)
+.github/workflows/ déploiement GitHub Pages
+```
 
 ## Format d'une carte
+
+Un fichier par carte : `cartes-500/<theme>/<sous-theme>/<id>_<nom>.md`
 
 ```md
 # Titre
@@ -43,18 +48,39 @@ Croix blanche sur fond rouge, l'un des deux seuls drapeaux nationaux carrés.
 # Image
 ```
 
-La section `# Image` est volontairement laissée vide pour le moment : les visuels seront ajoutés plus tard.
+L'identifiant a la forme `theme-sous-theme-numero` (ex. `1-1-001`), séquentiel et
+redémarrant à `001` dans chaque sous-thème. La section `# Image` est laissée vide :
+le visuel est associé par convention via `images/cartes-500/<id>.webp`.
 
-## Contenu
+## Images
 
-- Drapeaux et chefs-lieux : les **26 cantons suisses** sont complets.
-- Le thème 6 fusionne les **merveilles naturelles** et l'**espace**.
-- Le thème 7 présente les **animaux** en trois tiers : un best-of suisse (faune et races d'élevage), une sélection européenne et une sélection mondiale.
-- Les principaux pays d'Europe et du monde sont traités du point de vue suisse.
+Les images proviennent de **Wikimedia Commons** (photos, vignettes de Wikipédia)
+et de **Wikidata** (propriété P41 pour les drapeaux), converties en **WebP**
+(largeur max 1024 px, qualité 82). Les licences et auteurs sont conservés dans
+`images/_flags.json` et `images/cartes-500/_manifest.csv`. Projet non commercial.
+
+## Site
+
+Aperçu local : ouvrir `site/index.html` (aucun serveur requis).
+
+Régénérer après modification des cartes :
+
+```
+python scripts/build_site.py
+```
+
+Options : `--out <fichier>` et `--img <base-url>` (utiles pour la CI).
+
+## Déploiement
+
+Publié sur **GitHub Pages** via `.github/workflows/deploy.yml` à chaque `push`
+sur `main`. La CI assemble le site et les images dans `_site/` puis déploie
+l'artefact, sans dupliquer les images dans le dépôt.
+
+Site : https://gfahrni.github.io/kids-culturecards-ch/
 
 ## Conventions
 
-- Un dossier par thème, un dossier par sous-thème.
-- Un fichier Markdown par carte.
 - Pas d'emoji dans les fichiers.
 - Noms de fichiers en minuscules, sans accents, séparés par des tirets.
+- Un dossier par thème, un dossier par sous-thème.
