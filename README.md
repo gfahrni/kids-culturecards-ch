@@ -3,19 +3,19 @@
 Base de données de contenu pour un système de **cartes à collectionner** destinées aux enfants en Suisse.
 Chaque carte présente un sujet de culture générale : une image, un titre et une courte description de deux lignes.
 
+La base compte actuellement **832 cartes**, réparties en **7 thèmes** (plus de 100 cartes par thème).
+
 ## Structure
 
-La base est organisée en **7 thèmes**, chacun divisé en **sous-thèmes** :
-
-| N° | Thème | Sous-thèmes |
-|----|-------|-------------|
-| 1 | `drapeaux` | `suisse`, `europe`, `monde` |
-| 2 | `capitales-chefs-lieux` | `suisse`, `europe`, `monde` |
-| 3 | `montagnes` | `suisse`, `europe`, `monde` |
-| 4 | `lacs-mers-oceans-rivieres` | `lacs`, `mers-et-oceans`, `fleuves-et-rivieres` |
-| 5 | `monuments` | `suisse`, `europe`, `monde` |
-| 6 | `merveilles-naturelles` | `suisse`, `monde` |
-| 7 | `espace` | `systeme-solaire`, `au-dela`, `exploration` |
+| N° | Thème | Sous-thèmes | Cartes |
+|----|-------|-------------|-------:|
+| 1 | `drapeaux` | `suisse`, `europe`, `monde` | 121 |
+| 2 | `capitales-chefs-lieux` | `suisse`, `europe`, `monde` | 121 |
+| 3 | `montagnes` | `suisse`, `europe`, `monde` | 106 |
+| 4 | `lacs-mers-oceans-rivieres` | `lacs`, `mers-et-oceans`, `fleuves-et-rivieres` | 142 |
+| 5 | `monuments` | `suisse`, `europe`, `monde` | 116 |
+| 6 | `merveilles-naturelles` | `suisse`, `monde` | 100 |
+| 7 | `espace` | `systeme-solaire`, `au-dela`, `exploration` | 126 |
 
 Un fichier Markdown correspond à une carte :
 `<theme>/<sous-theme>/<theme-sous-theme-numero>_<nom>.md`
@@ -27,7 +27,7 @@ L'identifiant d'une carte est de la forme `theme-sous-theme-numero` :
 - `1-1-001` → thème 1 (`drapeaux`), sous-thème 1 (`suisse`), première carte.
 - `3-2-004` → thème 3 (`montagnes`), sous-thème 2 (`europe`), quatrième carte.
 
-La numérotation redémarre à `001` dans chaque sous-thème.
+La numérotation est séquentielle et redémarre à `001` dans chaque sous-thème.
 
 ## Format d'une carte
 
@@ -47,7 +47,15 @@ La section `# Image` est volontairement laissée vide pour le moment : les visue
 
 ## Slots non définis
 
-Chaque sous-thème contient un fichier placeholder `041_undefined.md` qui marque un emplacement libre non encore défini. Il sert de modèle pour ajouter de futures cartes.
+Chaque sous-thème contient un fichier placeholder `_undefined.md` portant le numéro du prochain emplacement libre.
+Il sert de modèle pour ajouter de futures cartes (par exemple `1-1-028_undefined.md`).
+
+## Contenu
+
+- Drapeaux et chefs-lieux : les **26 cantons suisses** sont complets.
+- Les principaux pays d'Europe et du monde sont traités du point de vue suisse.
+- Les thèmes montagnes, monuments et merveilles naturelles privilégient la Suisse, puis l'Europe et le monde.
+- Le thème espace mêle les incontournables et des découvertes plus étonnantes.
 
 ## Conventions
 
