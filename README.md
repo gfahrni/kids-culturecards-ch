@@ -15,7 +15,7 @@ La base compte **999 cartes**, réparties en **7 thèmes**.
 | 4 | `lacs-mers-oceans-rivieres` | `lacs`, `mers-et-oceans`, `fleuves-et-rivieres` | 142 |
 | 5 | `monuments` | `suisse`, `europe`, `monde` | 116 |
 | 6 | `merveilles-et-espace` | `suisse`, `monde`, `espace` | 160 |
-| 7 | `animaux` | `mammiferes`, `oiseaux`, `poissons`, `reptiles-et-amphibiens`, `insectes-et-araignees`, `races-suisses` | 233 |
+| 7 | `animaux` | `suisse`, `europe`, `monde` | 233 |
 
 Un fichier Markdown correspond à une carte :
 `<theme>/<sous-theme>/<theme-sous-theme-numero>_<nom>.md`
@@ -54,7 +54,7 @@ Il sert de modèle pour ajouter de futures cartes (par exemple `1-1-028_undefine
 
 - Drapeaux et chefs-lieux : les **26 cantons suisses** sont complets.
 - Le thème 6 fusionne les **merveilles naturelles** et l'**espace**.
-- Le thème 7 regroupe les **animaux suisses** : mammifères, oiseaux, poissons, reptiles, amphibiens, insectes, araignées et races d'élevage.
+- Le thème 7 présente les **animaux** en trois tiers : un best-of suisse (faune et races d'élevage), une sélection européenne et une sélection mondiale.
 - Les principaux pays d'Europe et du monde sont traités du point de vue suisse.
 
 ## Conventions
