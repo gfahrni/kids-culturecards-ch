@@ -119,7 +119,9 @@ dialog#lb[open]{animation:lbpop .18s ease}
 @keyframes lbpop{from{opacity:0;transform:scale(.96)}}
 .lbBox{position:relative;width:100%;display:flex;flex-direction:column;color:var(--fg);background:var(--card);
 border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.45);max-height:94vh}
-.lbImgWrap{background:var(--frame);display:flex;align-items:center;justify-content:center;padding:14px;min-height:0}
+.lbImgWrap{position:relative;background:var(--frame);display:flex;align-items:center;justify-content:center;padding:14px;min-height:0}
+.lbId{position:absolute;right:14px;bottom:14px;max-width:80%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+font-size:11px;color:#fff;background:rgba(0,0,0,.5);border-radius:999px;padding:3px 9px}
 .lbImgWrap img{max-width:100%;max-height:70vh;width:auto;height:auto;object-fit:contain;display:block;border-radius:8px}
 .lbCap{padding:12px 16px 16px}
 .lbCap h3{margin:0 0 4px;font-size:17px}
@@ -153,7 +155,7 @@ html.lb-on{overflow:hidden}
     <button class="lbClose" id="lbClose" aria-label="Fermer">&times;</button>
     <button class="lbNav lbPrev" id="lbPrev" aria-label="Carte precedente">&#8249;</button>
     <button class="lbNav lbNext" id="lbNext" aria-label="Carte suivante">&#8250;</button>
-    <div class="lbImgWrap"><img id="lbImg" alt=""></div>
+    <div class="lbImgWrap"><img id="lbImg" alt=""><span class="lbId" id="lbId"></span></div>
     <div class="lbCap"><h3 id="lbTitle"></h3><p id="lbDesc"></p></div>
   </div>
 </dialog>
@@ -162,6 +164,8 @@ const DATA = /*__DATA__*/;
 const THEMES = /*__THEMES__*/;
 const IMG = /*__IMG__*/;
 const ALL = {key:"all",label:"Tout"};
+const TLABEL = {}, SLABEL = {};
+THEMES.forEach(t => { TLABEL[t.key] = t.label; t.subs.forEach(s => SLABEL[t.key+"|"+s.key] = s.label); });
 
 const norm = s => (s||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase();
 let theme = "all", sub = "all", q = "";
@@ -201,7 +205,7 @@ function render(){
   $("empty").hidden = list.length>0;
 }
 
-const lb=$("lb"), lbImg=$("lbImg"), lbTitle=$("lbTitle"), lbDesc=$("lbDesc"), lbCount=$("lbCount");
+const lb=$("lb"), lbImg=$("lbImg"), lbTitle=$("lbTitle"), lbDesc=$("lbDesc"), lbCount=$("lbCount"), lbId=$("lbId");
 function preload(){
   [1,-1].forEach(d => { const c = visible[(idx+d+visible.length)%visible.length];
     if(c) new Image().src = IMG+c.id+".webp"; });
@@ -213,6 +217,7 @@ function openLb(i){
   lbImg.src = IMG+c.id+".webp"; lbImg.alt = c.title;
   lbTitle.textContent = c.title; lbDesc.textContent = c.desc;
   lbCount.textContent = (idx+1)+" / "+visible.length;
+  lbId.textContent = TLABEL[c.t] + " \\u00b7 " + (SLABEL[c.t+"|"+c.s]||c.s) + " \\u00b7 " + c.id;
   if(!lb.open) lb.showModal();
   document.documentElement.classList.add("lb-on");
   preload();
